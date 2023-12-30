@@ -41,10 +41,35 @@ inlanefreight.local structure: <br/>
 <img src="https://i.imgur.com/RjpI9tW.jpg" height="80%" width="80%" alt="Domain"/>
 <br />
 <br />
+ 
+<h2>Task 1: Manage Users</h2>
+Our first task is to add some new hires. We will add them under the <b>"inlanefrieght.local"</b> scope, into the <b>"Corp -> Employees -> HQ-NYC -> IT"</b> folder structure. The users we will be adding are:
+
+- <b>Andromeda Cepheus</b>
+- <b>Orion Starchaser</b>
+- <b>Artemis Callisto</b>
+
+Each user will have the following attributes set with it, along with their full name:
+
+- <b>full name</b>
+- <b>email (first-inital.lastname@inlanefrieght.local)</b>
+- <b>display name</b>
+- <b>User must change password at next logon</b>
+
+After that we will be removing two users who are no longer with the company. Their names are:
+
+- <b>Mike O'Hare</b>
+- <b>Paul Valencia</b>
+
+And lastly we will be resetting the password of <b>Adam Masters</b>, who was locked out of his account after multiple failed logins.
+<br />
+<br />
+
+<p align="center">
 Adding a user account inside the IT container: <br/>
 <img src="https://i.imgur.com/9DvdESr.jpg" height="80%" width="80%" alt="Add User"/>
 <br />
-<b>We will be adding three users to the IT container: Andromeda Cepheus, Orion Starchaser, Artemis Callisto. In the above screenshot we added Andromeda Cepheus with the follow attributes: their full name, a.cepheus@inlanefreight.local email, and acepheus as their logon.</b>
+<b>Here we are adding Andromeda Cepheus with the correct attributes</b>
 <br />
 <br />
 <img src="https://i.imgur.com/AfuSKUM.jpg" height="80%" width="80%" alt="User Password"/> 
@@ -59,19 +84,65 @@ All new users added: <br/>
 Deleting a user account: <br/>
 <img src="https://i.imgur.com/WtFkTJJ.jpg" height="80%" width="80%" alt="Delete User"/> 
 <br />
-<b>Our next step is to remove the user that is no longer with the company. This user's name is Paul Valencia. We can find Paul by doing a find search under the Employees container. Then we type their full name to get the correct user. Then we will delete the user.</b>
+<b>Our next step is to remove the users that are no longer with the company. We can find them by doing a find search under the Employees container. Next we type their full name to get the correct users. Then we will delete the users.</b>
 <br />
 <br />
 Unlocking a user account: <br/>
 <img src="https://i.imgur.com/MsZfH1v.jpg" height="80%" width="80%" alt="Unlock User"/> 
 <br />
-<b>A user by the name of Adam Masters has been locked out of his account because of multiple failed logins. We will simply reset Adam's password, as well as select the option to unlock the user's account.</b>
+<b>We will simply reset Adam's password, as well as select the option to unlock the user's account.</b>
 <br />
 <br />
+
+<h2>Task 2: Manage Groups and Other Organizational Units</h2>
+In our second task, we are tasked with creating a new <b>Security Group</b> called <b>Security Analysts</b> and then add our new three hires into it. The group will be nested in an organizational unit by the same name under the IT hive.
+<br />
+<br />
+
+<p align="center">
 Adding a new organizational unit in the IT container: <br/>
 <img src="https://i.imgur.com/b3rdNtk.jpg" height="80%" width="80%" alt="OU"/> 
 <br />
-<b>Our next task is to create an organizational unit in the IT container for our new users.</b>
+<b>We create an organizational unit in the IT container for our new users.</b>
+<br />
+<br />
+Adding a security group inside the OU: <br/>
+<img src="https://i.imgur.com/47k7LEO.jpg" height="80%" width="80%" alt="Group"/> 
+<br />
+<b>Next we will create a security group inside the OU. It will have a Domain Local scope with the Security group type.</b>
+<br />
+<br />
+Moving a user to a group: <br/>
+<img src="https://i.imgur.com/gbfoWox.jpg" height="80%" width="80%" alt="User to Group"/> 
+<br />
+<b>We will now move our three new users into the Security Analysts group.</b>
+<br />
+<br />
+
+<h2>Task 3: Manage Group Policy Objects</h2>
+In our third task, we are asked to duplicate the group policy <b>Logon Banner</b>, rename it <b>Security Analysts Control</b>, and modfiy it to work for the new Analysts OU. We will need to make the following changes to the Policy Object:
+
+- <b>modify the Password policy settings for users in the group and allowing users to access Powershell and CMD since their daily duties requires it.</b>
+- <b>For computer settings, we need to ensure Logon Banner is applied and that removeable media is blocked from access.</b>
+<br />
+<br />
+<p align="center">
+Duplicating the Logon Banner group policy with Powershell: <br/>
+<img src="https://i.imgur.com/fUax6ib.jpg" height="80%" width="80%" alt="Duplicate GPO"/> 
+<br />
+<b>We can use the Powershell cmdlet Copy-GPO to make a duplicate of the group policy with the same attributes.</b>
+<br />
+<br />
+Linking the Security Analysts Control to an OU: <br/>
+<img src="https://i.imgur.com/fbKinlG.jpg" height="80%" width="80%" alt="Linking GPO"/> 
+<br />
+<b>We will have to link the new GPO we created to the OU. We use the New-GPLink cmdlet in Powershell to do this.</b>
+<br />
+<br />
+The Group Policy Management Console: <br/>
+<img src="https://i.imgur.com/fkoAVno.jpg" height="80%" width="80%" alt="GPM"/> 
+<br />
+<b>Next we will have to modify the new GPO in the Group Policy Management console.</b>
 <br />
 <br />
 
