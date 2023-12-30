@@ -142,7 +142,43 @@ Linking the Security Analysts Control to an OU: <br/>
 The Group Policy Management Console: <br/>
 <img src="https://i.imgur.com/fkoAVno.jpg" height="80%" width="80%" alt="GPM"/> 
 <br />
-<b>Next we will have to modify the new GPO in the Group Policy Management console.</b>
+<b>We will have to modify the new GPO in the Group Policy Management console.</b>
+<br />
+<br />
+Granting Powershell and CMD access to the new GPO: <br/>
+Powershell: <br/>
+<img src="https://i.imgur.com/Nn0kmu3.jpg" height="80%" width="80%" alt="GPO Access"/> 
+<br />
+<b>We will have to nagivate to the removeable media policy settings by this route: User Configuration -> Policies -> Administrative Templates -> System -> Removeable Storage Access. There we will enable it to grant access.</b>
+<br />
+CMD: <br/>
+<img src="https://i.imgur.com/zqCY4x7.jpg" height="80%" width="80%" alt="GPO Access"/> 
+<br />
+<b>We will have to nagivate to the Command Prompt settings by this route: User Configuration -> Policies -> Administrative Templates -> System. There we will disable it since it prevents users from running the Command Prompt.</b>
+<br />
+<br />
+Double checking the security policies: <br/>
+<img src="https://i.imgur.com/N79G4aN.jpg" height="80%" width="80%" alt="Linking GPO"/> 
+<br />
+<b>We will navigate to: Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Local Policies -> Security Options to double check to see if the security polices from the Logon Banner was duplicated to the new GPO.</b>
+<br />
+<img src="https://i.imgur.com/S5V5FpM.jpg" height="80%" width="80%" alt=Check 1"/> 
+<br />
+<img src="https://i.imgur.com/Ww2TWxI.jpg" height="80%" width="80%" alt="Check 2"/> 
+<br />
+<b>Everything is in working order!</b>
+<br />
+<br />
+The Password Policy: <br/>
+<img src="https://i.imgur.com/zAGo4oo.jpg" height="80%" width="80%" alt="Password Policy"/> 
+<br />
+<b>Next we will navigate to: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy.</b>
+<br />
+<br />
+Updated Password Policy: <br/>
+<img src="https://i.imgur.com/RFHGNuN.jpg" height="80%" width="80%" alt="Updated Password Policy"/> 
+<br />
+<b>At the final part of our task, we configured the password policy that was required.</b>
 <br />
 <br />
 
