@@ -3,7 +3,7 @@ A HackTheBox Academy module focusing on authentication, authorization, and accou
 
 <h1>Introduction to Active Directory</h1>
 
-[Module Link](https://academy.hackthebox.com/course/preview/intro-to-network-traffic-analysis)
+[Module Link](https://academy.hackthebox.com/course/preview/introduction-to-active-directory)
 
 <h2>Description</h2>
 This module covers the following:
